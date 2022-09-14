@@ -1,0 +1,92 @@
+Name:               master01
+Roles:              master,worker
+Labels:             beta.kubernetes.io/arch=amd64
+                    beta.kubernetes.io/os=linux
+                    kubernetes.io/arch=amd64
+                    kubernetes.io/hostname=master01
+                    kubernetes.io/os=linux
+                    node-role.kubernetes.io/master=
+                    node-role.kubernetes.io/worker=
+                    node.openshift.io/os_id=rhcos
+Annotations:        machineconfiguration.openshift.io/currentConfig: rendered-master-b0eb700371f2972c7bae2d6f83ae16d2
+                    machineconfiguration.openshift.io/desiredConfig: rendered-master-b0eb700371f2972c7bae2d6f83ae16d2
+                    machineconfiguration.openshift.io/reason: 
+                    machineconfiguration.openshift.io/state: Done
+                    volumes.kubernetes.io/controller-managed-attach-detach: true
+CreationTimestamp:  Tue, 13 Jul 2021 08:14:41 -0400
+Taints:             <none>
+Unschedulable:      false
+Lease:
+  HolderIdentity:  master01
+  AcquireTime:     <unset>
+  RenewTime:       Wed, 14 Sep 2022 04:28:36 -0400
+Conditions:
+  Type             Status  LastHeartbeatTime                 LastTransitionTime                Reason                       Message
+  ----             ------  -----------------                 ------------------                ------                       -------
+  MemoryPressure   False   Wed, 14 Sep 2022 04:25:15 -0400   Tue, 13 Sep 2022 00:04:20 -0400   KubeletHasSufficientMemory   kubelet has sufficient memory available
+  DiskPressure     False   Wed, 14 Sep 2022 04:25:15 -0400   Tue, 13 Sep 2022 00:04:20 -0400   KubeletHasNoDiskPressure     kubelet has no disk pressure
+  PIDPressure      False   Wed, 14 Sep 2022 04:25:15 -0400   Tue, 13 Sep 2022 00:04:20 -0400   KubeletHasSufficientPID      kubelet has sufficient PID available
+  Ready            True    Wed, 14 Sep 2022 04:25:15 -0400   Tue, 13 Sep 2022 00:04:30 -0400   KubeletReady                 kubelet is posting ready status
+Addresses:
+  InternalIP:  192.168.50.10
+  Hostname:    master01
+Capacity:
+  cpu:                4
+  ephemeral-storage:  41391084Ki
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  memory:             16419132Ki
+  pods:               250
+Allocatable:
+  cpu:                3500m
+  ephemeral-storage:  37072281128
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  memory:             15268156Ki
+  pods:               250
+System Info:
+  Machine ID:                             262632aa4d8943c8a494510d13d9ef20
+  System UUID:                            91a3d73b-8820-4d72-992f-c16ea8b69264
+  Boot ID:                                6d3bbee6-e30c-46bc-aab7-1ca59407b54c
+  Kernel Version:                         4.18.0-193.56.1.el8_2.x86_64
+  OS Image:                               Red Hat Enterprise Linux CoreOS 46.82.202106181041-0 (Ootpa)
+  Operating System:                       linux
+  Architecture:                           amd64
+  Container Runtime Version:              cri-o://1.19.2-6.rhaos4.6.git686e6d9.el8
+  Kubelet Version:                        v1.19.0+b00ba52
+  Kube-Proxy Version:                     v1.19.0+b00ba52
+Non-terminated Pods:                      (22 in total)
+  Namespace                               Name                                         CPU Requests  CPU Limits  Memory Requests  Memory Limits  AGE
+  ---------                               ----                                         ------------  ----------  ---------------  -------------  ---
+  openshift-apiserver                     apiserver-6947885569-599st                   110m (3%)     0 (0%)      250Mi (1%)       0 (0%)         28h
+  openshift-cluster-node-tuning-operator  tuned-c5hxb                                  10m (0%)      0 (0%)      50Mi (0%)        0 (0%)         427d
+  openshift-cluster-version               cluster-version-operator-7dbc9ffd8f-5v5xv    20m (0%)      0 (0%)      50Mi (0%)        0 (0%)         28h
+  openshift-controller-manager            controller-manager-v9pnq                     100m (2%)     0 (0%)      100Mi (0%)       0 (0%)         28h
+  openshift-dns                           dns-default-ptfpt                            65m (1%)      0 (0%)      110Mi (0%)       512Mi (3%)     427d
+  openshift-etcd                          etcd-master01                                430m (12%)    0 (0%)      860Mi (5%)       0 (0%)         427d
+  openshift-etcd                          etcd-quorum-guard-5bf678d57c-fxnlk           10m (0%)      0 (0%)      5Mi (0%)         0 (0%)         28h
+  openshift-image-registry                node-ca-6vzwk                                10m (0%)      0 (0%)      10Mi (0%)        0 (0%)         427d
+  openshift-kube-apiserver                kube-apiserver-master01                      340m (9%)     0 (0%)      1224Mi (8%)      0 (0%)         28h
+  openshift-kube-controller-manager       kube-controller-manager-master01             100m (2%)     0 (0%)      500Mi (3%)       0 (0%)         28h
+  openshift-kube-scheduler                openshift-kube-scheduler-master01            25m (0%)      0 (0%)      150Mi (1%)       0 (0%)         28h
+  openshift-machine-config-operator       machine-config-daemon-h25rx                  40m (1%)      0 (0%)      100Mi (0%)       0 (0%)         427d
+  openshift-machine-config-operator       machine-config-server-49vxx                  20m (0%)      0 (0%)      50Mi (0%)        0 (0%)         427d
+  openshift-marketplace                   certified-operators-gjlwc                    10m (0%)      0 (0%)      50Mi (0%)        0 (0%)         124m
+  openshift-monitoring                    node-exporter-2mvll                          9m (0%)       0 (0%)      210Mi (1%)       0 (0%)         427d
+  openshift-multus                        multus-2p4cw                                 10m (0%)      0 (0%)      150Mi (1%)       0 (0%)         427d
+  openshift-multus                        multus-admission-controller-nztb7            20m (0%)      0 (0%)      20Mi (0%)        0 (0%)         427d
+  openshift-multus                        network-metrics-daemon-55c8x                 20m (0%)      0 (0%)      120Mi (0%)       0 (0%)         427d
+  openshift-oauth-apiserver               apiserver-6b9b557cdd-mzl5g                   150m (4%)     0 (0%)      200Mi (1%)       0 (0%)         28h
+  openshift-sdn                           ovs-kt9cl                                    100m (2%)     0 (0%)      400Mi (2%)       0 (0%)         427d
+  openshift-sdn                           sdn-4bm8x                                    110m (3%)     0 (0%)      220Mi (1%)       0 (0%)         427d
+  openshift-sdn                           sdn-controller-8smdz                         10m (0%)      0 (0%)      50Mi (0%)        0 (0%)         427d
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  Resource           Requests      Limits
+  --------           --------      ------
+  cpu                1719m (49%)   0 (0%)
+  memory             4879Mi (32%)  512Mi (3%)
+  ephemeral-storage  0 (0%)        0 (0%)
+  hugepages-1Gi      0 (0%)        0 (0%)
+  hugepages-2Mi      0 (0%)        0 (0%)
+Events:              <none>
