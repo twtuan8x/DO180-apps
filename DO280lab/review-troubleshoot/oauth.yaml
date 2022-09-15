@@ -1,0 +1,25 @@
+apiVersion: config.openshift.io/v1
+kind: OAuth
+metadata:
+  creationTimestamp: "2021-07-13T12:14:15Z"
+  generation: 13
+  managedFields:
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2021-07-13T12:14:15Z"
+  name: cluster
+  resourceVersion: "406127"
+  selfLink: /apis/config.openshift.io/v1/oauths/cluster
+  uid: c1d4f788-a51a-4e01-b162-d1bb686a2e14
+spec:
+  identityProviders:
+  - name: cluster-users
+    mappingMethod: claim
+    type: HTPasswd
+    htpasswd:
+      fileData:
+        name: compreview-users
